@@ -24,7 +24,7 @@ npm i mp-privacy --save
 
 # 4 - 配置与使用（两种使用方式都需要以下配置）
 
-4.1 小程序配置文件 app.json （2023年9月15日前调试需要此不配置）
+4.1 小程序配置文件 app.json （2023年9月15日前调试需要此步配置）
 ```json
 {
   "__usePrivacyCheck__": true,
