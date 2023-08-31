@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "my",
+  "usingComponents": {
+    "mp-privacy": "/components/mp-privacy"
+  }
+}

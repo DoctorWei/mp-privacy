@@ -1,0 +1,6 @@
+<view class="container">
+  <button class="btn" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">获取头像</button>
+  <button class="btn" bindtap="chooseLocation">地图选址</button>
+  <view class="usermotto">请使用2.32.3及以上版本基础库</view>
+  <mp-privacy />
+</view>

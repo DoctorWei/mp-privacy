@@ -1,0 +1,4 @@
+<view class="container">
+  <button class="btn" open-type="chooseAvatar" bind:chooseavatar="onChooseAvatar">获取头像</button>
+  <mp-privacy />
+</view>

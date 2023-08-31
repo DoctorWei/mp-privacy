@@ -1,0 +1,18 @@
+{
+  "name": "mp-privacy",
+  "version": "1.0.2",
+  "description": "微信小程序隐私接口授权组件",
+  "main": "app.js",
+  "miniprogram": "components/mp-privacy",
+  "devDependencies": {},
+  "dependencies": {},
+  "keywords": [
+    "微信小程序",
+    "隐私合规",
+    "隐私接口",
+    "隐私接口授权组件",
+    "隐私接口授权"
+  ],
+  "author": "DoctorWei",
+  "license": "MIT"
+}

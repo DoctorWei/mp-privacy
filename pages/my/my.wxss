@@ -1,0 +1,7 @@
+.btn {
+  margin: 20rpx;
+}
+
+.usermotto {
+  margin-top: 30px;
+}
