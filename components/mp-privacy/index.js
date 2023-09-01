@@ -90,7 +90,7 @@ Component({
     showReadTips() {
       wx.showModal({
         title: '提示',
-        content: '您必须阅读先隐私保护指引',
+        content: '您必须先阅读隐私保护指引',
         showCancel: false
       })
     },
