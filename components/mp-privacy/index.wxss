@@ -27,7 +27,7 @@
 }
 
 .content {
-  font-size: 28rpx;
+  font-size: 30rpx;
   color: #666;
   margin-top: 40rpx;
   text-align: justify;
@@ -43,6 +43,11 @@
   margin-top: 50rpx;
   display: flex;
   text-align: center;
+}
+
+button::after {
+  border: none;
+  display: none;
 }
 
 .btn-box .btn {
