@@ -8,7 +8,8 @@
     </view>
     <view class="btn-box">
       <button class="btn disagree" bindtap="disagreePrivacy">拒绝</button>
-      <button class="btn agree" id="agree-btn" open-type="agreePrivacyAuthorization" bindagreeprivacyauthorization="agreePrivacy">同意</button>
+      <button class="btn agree" bindtap="showReadTips" wx:if="{{read && !isRead}}">同意</button>
+      <button class="btn agree" id="agree-btn" open-type="agreePrivacyAuthorization" bindagreeprivacyauthorization="agreePrivacy" wx:else>同意</button>
     </view>
   </view>
 </view>

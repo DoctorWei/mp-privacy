@@ -21,6 +21,7 @@
       }
     ]
   },
+  "lazyCodeLoading": "requiredComponents",
   "style": "v2",
   "requiredPrivateInfos": [
     "chooseLocation",

@@ -26,8 +26,19 @@ const watch = function (ctx, obj) {
 }
 
 Component({
+  properties: {
+    action: {
+      type: String,
+      value: 'none', // exit | none
+    },
+    read: {
+      type: Boolean,
+      value: false, // 是否需要读后再同意
+    },
+  },
   data: {
     show: false,
+    isRead: false,
     name: ""
   },
   pageLifetimes: {
@@ -63,7 +74,25 @@ Component({
   },
   methods: {
     openContract() {
-      wx.openPrivacyContract()
+      wx.openPrivacyContract({
+        success: () => {
+          this.setData({
+            isRead: true
+          })
+        },
+        fail: () => {
+          this.setData({
+            isRead: false
+          })
+        },
+      })
+    },
+    showReadTips() {
+      wx.showModal({
+        title: '提示',
+        content: '您必须阅读先隐私保护指引',
+        showCancel: false
+      })
     },
     disagreePrivacy() {
       app.globalData.showPrivacy = false
@@ -71,6 +100,7 @@ Component({
       app.globalData.resolvePrivacyAuthorization({
         event: 'disagree'
       })
+      if (this.data.action === 'exit') wx.exitMiniProgram()
     },
     agreePrivacy() {
       // 用户点击同意后，开发者调用 resolve({ buttonId: 'agree-btn', event: 'agree' })  告知平台用户已经同意，参数传同意按钮的id。为确保用户有同意的操作，基础库在 resolve 被调用后，会去检查对应的同意按钮有没有被点击过。检查通过后，相关隐私接口会继续调用
