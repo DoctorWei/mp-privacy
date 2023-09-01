@@ -8,14 +8,14 @@
 
 ![mp-privacy][doge]
 
-# 1 - 仓库地址
+## 1 - 仓库地址
 -  [mp-privacy【github】](https://github.com/DoctorWei/mp-privacy)
 -  [mp-privacy【码云gitee】](https://gitee.com/WeiDoctor/mp-privacy)
 
-# 2 - 测试环境
+## 2 - 测试环境
 - 微信小程序基础库版本：2.32.3 及以上
 
-# 3 - 安装方法：npm安装
+## 3 - 安装方法：npm安装
 
 ```
 npm i mp-privacy --save
@@ -24,7 +24,7 @@ npm i mp-privacy --save
 
 3.2 如果不想使用npm安装，可以直接下载源码，然后复制mp-privacy组件进行使用
 
-# 4 - 配置与使用（两种使用方式都需要以下配置）
+## 4 - 配置与使用（两种使用方式都需要以下配置）
 
 4.1 小程序配置文件 app.json （2023年9月15日前调试需要此步配置）
 ```json
