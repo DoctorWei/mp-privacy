@@ -41,6 +41,11 @@ Component({
     isRead: false,
     name: ""
   },
+  lifetimes: {
+    detached: function () {
+      app.globalData.showPrivacy = false
+    },
+  },
   pageLifetimes: {
     hide() {
       app.globalData.showPrivacy = false
