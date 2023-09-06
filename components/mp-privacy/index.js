@@ -37,6 +37,7 @@ Component({
     },
   },
   data: {
+    reading: false,
     show: false,
     isRead: false,
     name: ""
@@ -48,10 +49,13 @@ Component({
   },
   pageLifetimes: {
     hide() {
-      app.globalData.showPrivacy = false
+      if (!this.data.reading) app.globalData.showPrivacy = false
     },
     show() {
       const _ = this
+      _.setData({
+        reading: false
+      })
       // 调用监听器，监听app.globalData.showPrivacy数据变化
       watch(app.globalData, {
         showPrivacy: function (newVal) {
@@ -79,6 +83,9 @@ Component({
   },
   methods: {
     openContract() {
+      this.setData({
+        reading: true
+      })
       wx.openPrivacyContract({
         success: () => {
           this.setData({

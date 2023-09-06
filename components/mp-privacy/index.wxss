@@ -27,7 +27,7 @@
 }
 
 .content {
-  font-size: 30rpx;
+  font-size: 32rpx;
   color: #666;
   margin-top: 40rpx;
   text-align: justify;
