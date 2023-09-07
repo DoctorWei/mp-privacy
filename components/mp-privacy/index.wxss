@@ -27,6 +27,7 @@
 }
 
 .content {
+  display: block;
   font-size: 32rpx;
   color: #666;
   margin-top: 40rpx;
