@@ -44,12 +44,12 @@ Component({
   },
   lifetimes: {
     detached: function () {
-      app.globalData.showPrivacy = false
+      this.disagreeHandle()
     },
   },
   pageLifetimes: {
     hide() {
-      if (!this.data.reading) app.globalData.showPrivacy = false
+      if (!this.data.reading) this.disagreeHandle()
     },
     show() {
       const _ = this
@@ -106,23 +106,27 @@ Component({
         showCancel: false
       })
     },
-    disagreePrivacy() {
-      app.globalData.showPrivacy = false
+    disagreeHandle() {
       // 用户点击拒绝后，开发者调用 resolve({ event:'disagree' }) 告知平台用户已经拒绝
-      app.globalData.resolvePrivacyAuthorization({
-        event: 'disagree'
-      })
+      app.globalData.showPrivacy = false
+      if (app.globalData.resolvePrivacyAuthorization) {
+        app.globalData.resolvePrivacyAuthorization({
+          event: 'disagree'
+        })
+      }
+    },
+    disagreePrivacy() {
+      this.disagreeHandle()
       if (this.data.action === 'exit') wx.exitMiniProgram()
     },
     agreePrivacy() {
       // 用户点击同意后，开发者调用 resolve({ buttonId: 'agree-btn', event: 'agree' })  告知平台用户已经同意，参数传同意按钮的id。为确保用户有同意的操作，基础库在 resolve 被调用后，会去检查对应的同意按钮有没有被点击过。检查通过后，相关隐私接口会继续调用
-      app.globalData.resolvePrivacyAuthorization({
-        buttonId: 'agree-btn',
-        event: 'agree'
-      })
-      app.globalData.showPrivacy = false
-    },
-    hideModal() {
+      if (app.globalData.resolvePrivacyAuthorization) {
+        app.globalData.resolvePrivacyAuthorization({
+          buttonId: 'agree-btn',
+          event: 'agree'
+        })
+      }
       app.globalData.showPrivacy = false
     },
     catchtap() {}

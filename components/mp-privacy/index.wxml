@@ -1,6 +1,6 @@
 <!-- modal:隐私授权弹窗-->
 
-<view wx:if="{{show}}" class="modal-box" bindtap="hideModal">
+<view wx:if="{{show}}" class="modal-box" bindtap="disagreeHandle">
   <view class="dialog" catchtap="catchtap">
     <view class="title">隐私保护指引</view>
     <view class="content">
