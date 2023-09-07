@@ -58,7 +58,7 @@ Component({
       })
       // 调用监听器，监听app.globalData.showPrivacy数据变化
       watch(app.globalData, {
-        showPrivacy: function (newVal) {
+        "showPrivacy": function (newVal) {
           if (newVal && wx.getPrivacySetting) {
             wx.getPrivacySetting({
               success(res) {

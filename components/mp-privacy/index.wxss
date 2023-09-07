@@ -37,6 +37,7 @@
 
 .link {
   color: #19be6b;
+  display: inline;
 }
 
 .btn-box {
@@ -45,9 +46,13 @@
   text-align: center;
 }
 
-button::after {
+.btn::after {
   border: none;
   display: none;
+}
+
+.hover {
+  opacity: 0.7;
 }
 
 .btn-box .btn {
