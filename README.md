@@ -1,6 +1,6 @@
 # mp-privacy (小程序隐私保护指引授权弹窗组件)
 
- 本文档讲述的隐私保护指引授权弹窗组件适用于微信原生小程序，[uni-app小程序隐私保护指引授权弹窗组件请查看这里](https://developers.weixin.qq.com/community/develop/article/doc/0004a6e9e94d20f0c1403381562013)
+ 本文档讲述的隐私保护指引授权弹窗组件适用于微信原生小程序，[uni-app小程序隐私保护指引授权弹窗组件请查看这里](https://gitee.com/WeiDoctor/uni-mp-privacy)
 
 微信发布[关于小程序隐私保护指引设置的公告](https://developers.weixin.qq.com/community/develop/doc/00042e3ef54940ce8520e38db61801)，为规范开发者的用户个人信息处理行为，保障用户的合法权益，自2023年9月15日起，对于涉及处理用户个人信息的小程序开发者，微信要求，仅当开发者主动向平台同步用户已阅读并同意了小程序的隐私保护指引等信息处理规则后，方可调用微信提供的隐私接口。
 
