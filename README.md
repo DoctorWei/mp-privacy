@@ -79,7 +79,7 @@ App({
 
 | 属性   | 必填 |  类型  | 默认  | 说明       | 最低版本 |
 | -----  | ---- | ------ | ----- | ------- | ------ |
-| action |  否  | string  | none  | 用户点击拒绝后的程序动作。可选 exit 或 none，exit退出小程序 | 1.0.5 |
+| action |  否  | string  | none  | 用户点击拒绝后的程序动作。可选 exit 或 showTips 或 none，exit退出小程序，showTips提示“必须同意后才可以继续使用当前小程序”的Toast | 1.0.11 |
 | read   |  否  | boolean | false | 是否必须有阅读动作才能点击同意按钮 | 1.0.5 |
 
 

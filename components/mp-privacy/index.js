@@ -117,7 +117,15 @@ Component({
     },
     disagreePrivacy() {
       this.disagreeHandle()
-      if (this.data.action === 'exit') wx.exitMiniProgram()
+      if (this.data.action === 'exit') {
+        wx.exitMiniProgram();
+      } else if (this.data.action === 'showTips') {
+        wx.showToast({
+          title: '必须同意后才可以继续使用当前小程序',
+          icon: 'none',
+          duration: 2000
+        })
+      }
     },
     agreePrivacy() {
       // 用户点击同意后，开发者调用 resolve({ buttonId: 'agree-btn', event: 'agree' })  告知平台用户已经同意，参数传同意按钮的id。为确保用户有同意的操作，基础库在 resolve 被调用后，会去检查对应的同意按钮有没有被点击过。检查通过后，相关隐私接口会继续调用
